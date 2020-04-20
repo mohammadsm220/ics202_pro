@@ -8,7 +8,7 @@ public class TrieNode {
 	boolean isEnd;
 
 	TrieNode(){
-		nodes=null;
+		nodes=new ArrayList<TrieNode>();;
 		element = null;
 		isEnd=false;
 	}
@@ -25,7 +25,7 @@ public class TrieNode {
 		System.out.println(element);
 		this.isEnd=isEnd;
 		System.out.println(element);
-		this.nodes=null;
+		this.nodes=new ArrayList<TrieNode>();
 		System.out.println(element);
 	}
 }

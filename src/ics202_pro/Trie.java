@@ -17,18 +17,21 @@ public class Trie {
 
 			boolean flag= false;
 
-			//TrieNode node = new TrieNode(currentChar,flag);
 
 
 
 
 			if(! index.nodes.contains(currentChar)){
 
-				index.nodes.add(new TrieNode(currentChar,flag));
+				TrieNode node = new TrieNode(currentChar,flag);
+
+				index.nodes.add(node);
+
+
 
 			}
 
-			index = index.nodes.get(index.nodes.indexOf(currentChar));
+			index = index.nodes.get(node);
 
 		}
 
