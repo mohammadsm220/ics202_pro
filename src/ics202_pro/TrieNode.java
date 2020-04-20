@@ -6,6 +6,7 @@ public class TrieNode {
 	ArrayList<TrieNode> nodes;
 	String element;
 	boolean isEnd;
+
 	TrieNode(){
 		nodes=null;
 		element = null;
@@ -16,5 +17,15 @@ public class TrieNode {
 		this.nodes=nodes;
 		this.element = element;
 		this.isEnd=isEnd;
+	}
+
+
+	TrieNode(String element, boolean isEnd ){
+		this.element = element;
+		System.out.println(element);
+		this.isEnd=isEnd;
+		System.out.println(element);
+		this.nodes=null;
+		System.out.println(element);
 	}
 }
