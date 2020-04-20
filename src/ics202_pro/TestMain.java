@@ -9,7 +9,9 @@ public class TestMain {
 
 
 
-	//	System.out.println(node1.nodes.get(node1.nodes.indexOf("a")));
+		System.out.println(node1.nodes.get(node1.nodes.indexOf("a")));
+
+		//ch1
 	}
 
 }
