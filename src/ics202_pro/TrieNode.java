@@ -8,7 +8,7 @@ public class TrieNode {
 	boolean isEnd;
 	TrieNode(){
 		nodes=null;
-		elemet = null;
+		element = null;
 		isEnd=false;
 	}
 
