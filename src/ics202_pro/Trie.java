@@ -31,7 +31,7 @@ public class Trie {
 
 			}
 
-			index = index.nodes.get(node);
+			index = index.nodes.get(0);
 
 		}
 
