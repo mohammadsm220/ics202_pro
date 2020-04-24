@@ -1,5 +1,7 @@
 package ics202_pro;
 
+import java.util.HashMap;
+
 public class TestMain {
 	public static void main(String args []){
 
@@ -19,6 +21,14 @@ public class TestMain {
 		t1.insert(str);
 
 		System.out.println(t1);
+
+		HashMap <Character , TrieNode> awlad = new HashMap <Character , TrieNode>();
+
+		awlad.put('a', node1);
+
+		boolean flag =awlad.isEmpty();
+
+		System.out.println(flag);
 
 
 

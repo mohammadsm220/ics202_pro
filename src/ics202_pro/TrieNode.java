@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 public class TrieNode {
 
-	HashMap <Character , TrieNode> awlad = new HashMap <Character , TrieNode>();
+	HashMap <Character , TrieNode> awlad;
 	char element;
 	boolean isEnd;
 
@@ -17,6 +17,8 @@ public class TrieNode {
 		this.element = element;
 
 		this.isEnd=isEnd;
+
+		this.awlad= new HashMap <Character , TrieNode>();
 	}
 
 

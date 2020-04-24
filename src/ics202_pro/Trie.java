@@ -2,10 +2,12 @@ package ics202_pro;
 
 public class Trie {
 
+	TrieNode root = new TrieNode();
+
 
 	/////////////Omer Part///////////////////////////////////////////
 
-	TrieNode root = new TrieNode();
+
 
 	public void insert(String str){
 		TrieNode index = root;
@@ -22,25 +24,47 @@ public class Trie {
 				currentNode=index.awlad.get(currentChar);
 			}
 			index=currentNode;
-			flag=(i==str.length()-1)? true:false;
+			flag=(i==str.length()-1)? true : false;
 		}
 	}
 
 	public boolean contains(String str){
-		return false;
+		TrieNode index =root;
+		TrieNode currentNode =null;
+		for(int i =0 ;i<str.length(); i++){
+			char currentChar = str.charAt(i);
+			currentNode=index.awlad.get(currentChar);
+			if(currentNode==null){
+				return false;
+			}else{
+				index=currentNode;
+			}
+		}
+
+		return index.isEnd;
 
 	}
-	public boolean isEmpty(String str){
-		return false;
+	public boolean isEmpty(){
+		return root.awlad.isEmpty();
 
 	}
 	public int size(){
-		return 0;
+
+		TrieNode index =root;
+
+		if(index.awlad==null)
+			return 0;
+		else{
+			return 0;
+		}
+
+
 	}
 
 	Trie(){
 
 	}
+
 
 	/////////////////////////////////////////////////////////////////////////////
 
