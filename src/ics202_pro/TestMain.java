@@ -8,27 +8,23 @@ public class TestMain {
 		Trie t1=new Trie();
 
 
-		TrieNode node1 =new TrieNode('c',false);
 
-		TrieNode node2 =new TrieNode('a',false);
 
-		node1.awlad.put('a', node2);
-
-		System.out.println(node1.awlad.get('a'));
 
 		String str="car";
 
 		t1.insert(str);
 
 		System.out.println(t1);
+		
+		t1.insert("side");
+		
+		System.out.println(t1.contains("side"));
+		
+		System.out.println(t1.contains("cat"));
 
-		HashMap <Character , TrieNode> awlad = new HashMap <Character , TrieNode>();
+		System.out.println(t1.contains(str));
 
-		awlad.put('a', node1);
-
-		boolean flag =awlad.isEmpty();
-
-		System.out.println(flag);
 
 
 

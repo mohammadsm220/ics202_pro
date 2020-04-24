@@ -15,6 +15,7 @@ public class Trie {
 		TrieNode currentNode =null;
 		for(int i =0 ; i < str.length() ; i++){
 			char currentChar = str.charAt(i);
+
 			if(!index.awlad.containsKey(currentChar)){
 				currentNode= new TrieNode(currentChar,flag);
 				index.awlad.put(currentChar, currentNode);
@@ -24,7 +25,7 @@ public class Trie {
 				currentNode=index.awlad.get(currentChar);
 			}
 			index=currentNode;
-			flag=(i==str.length()-1)? true : false;
+			flag=(i==str.length()-2)? true : false;
 		}
 	}
 
