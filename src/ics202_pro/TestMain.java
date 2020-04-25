@@ -23,11 +23,8 @@ public class TestMain {
 		t1.delete("sid");
 		t1.delete("side");
 		System.out.println(t1.contains("side"));
-<<<<<<< HEAD
 		System.out.println(t1.contains("sid"));
-		System.out.println(t1.contains("side"));
-=======
->>>>>>> 82d76a76bad608205beb66880b2ce1ffe0f3793a
+
 
 
 
