@@ -139,6 +139,23 @@ public class Trie {
 		root.awlad.clear();
 	}
 	public String allWordsPrefix(String str){
+		TrieNode index =root;
+		TrieNode x =new TrieNode();
+		TrieNode y =new TrieNode();
+		String allWords="",temp="",prefixWord="";
+		for(int i =0 ;i<str.length();i++){
+			prefixWord=index.element+"";
+			index=index.awlad.get(str.charAt(i));
+			}
+		while(x==index.awlad.get(index.awlad.size())){
+			int j=0;
+			x=index.awlad.get(j);
+			y=x;
+			while(y.awlad.isEmpty()){
+				temp=y.element+"";
+			}
+			j++;
+		}
 		return null;
 
 	}
