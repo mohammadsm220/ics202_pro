@@ -99,31 +99,39 @@ public class Trie {
 	public void delete(String str){
 		TrieNode index =root;
 		TrieNode lastChar=new TrieNode();
-		for(int i =0 ;i<str.length();i++){
-			index=index.awlad.get(str.charAt(i));
+		if(! contains(str)){
+			System.out.println("the String is not in the Trie");
+		}
+		else{
+			for(int i =0 ;i<str.length();i++){
+				index=index.awlad.get(str.charAt(i));
 
-			if(index.isEnd){
-				lastChar=index;
+				if(index.isEnd&& i!= str.length()-1){
+					lastChar=index;
+				}
 			}
 			if(! index.awlad.isEmpty()){
 				index.isEnd=false;
 			}
 			else{
 				index=root;
-				for(int j=0;j<str.length();j++){
-
-					if(index.equals(lastChar)){
-						index.awlad.get(str.charAt(j)).awlad.clear();
+				if(lastChar!=null){
+					for(int j=0;j<str.length();j++){
+						if(index.equals(lastChar)){
+							index.awlad.get(str.charAt(j)).awlad.clear();
+							j=str.length()-1;
+						}
 						index=index.awlad.get(str.charAt(j));
 					}
 				}
+				else{
+					root.awlad.get(str.charAt(0)).awlad.clear();
+				}
 			}
-
 		}
 	}
 	public void clear(){
-
-
+		root.awlad.clear();
 	}
 	public String allWordsPrefix(String str){
 		return null;
