@@ -93,7 +93,12 @@ public class Trie {
 	/////////////////////////////Mohammed Part////////////////////////////////////
 
 	public boolean isPrefix(String str){
-		return false;
+		TrieNode index=root;
+
+		for(int i =0 ;i<str.length();i++){
+			index=index.awlad.get(str.charAt(i));
+		}
+		return ! index.awlad.isEmpty();
 
 	}
 	public void delete(String str){

@@ -11,13 +11,12 @@ public class TestMain {
 
 		t1.insert(str);
 
-		t1.insert("sidd");
-		t1.insert("sid");
-//		t1.delete("sid");
-		t1.delete("sidd");
+		t1.insert("sided");
 		System.out.println(t1.contains("sided"));
-		System.out.println(t1.contains("sid"));
+		t1.insert("sid");
+//		t1.delete("sid");;
 
+		System.out.println(t1.isPrefix("sided"));
 		//ch1
 	}
 
