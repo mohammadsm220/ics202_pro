@@ -100,7 +100,7 @@ public class Trie {
 		TrieNode lastWord=new TrieNode();
 		for(int i =0 ;i<str.length();i++){
 			index=index.awlad.get(str.charAt(i));
-			if(index.isEnd){
+			if(index.isEnd&& i!=str.length()-1){
 				lastWord=index;
 			}
 		}
@@ -111,7 +111,7 @@ public class Trie {
 			index=root;
 			for(int j=0;j<str.length();j++){
 				if(index.equals(lastWord)){
-					index.awlad.get(str.charAt(j)).awlad.clear();
+					index.awlad.remove(str.charAt(j+1)); 
 				}
 				index=index.awlad.get(str.charAt(j));
 			}
