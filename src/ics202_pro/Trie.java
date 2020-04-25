@@ -101,34 +101,25 @@ public class Trie {
 		TrieNode lastChar=new TrieNode();
 		for(int i =0 ;i<str.length();i++){
 			index=index.awlad.get(str.charAt(i));
-<<<<<<< HEAD
+
 			if(index.isEnd){
 				lastChar=index;
-=======
-			if(index.isEnd&& i!=str.length()-1){
-				lastWord=index;
->>>>>>> 82d76a76bad608205beb66880b2ce1ffe0f3793a
 			}
-		}
-		if(! index.awlad.isEmpty()){
-		index.isEnd=false;
-		}
-		else{
-			index=root;
-			for(int j=0;j<str.length();j++){
-<<<<<<< HEAD
-				if(index.equals(lastChar)){
-					index.awlad.get(str.charAt(j)).awlad.clear();
-=======
-				if(index.equals(lastWord)){
-					index.awlad.remove(str.charAt(j+1)); 
->>>>>>> 82d76a76bad608205beb66880b2ce1ffe0f3793a
+			if(! index.awlad.isEmpty()){
+				index.isEnd=false;
+			}
+			else{
+				index=root;
+				for(int j=0;j<str.length();j++){
+
+					if(index.equals(lastChar)){
+						index.awlad.get(str.charAt(j)).awlad.clear();
+						index=index.awlad.get(str.charAt(j));
+					}
 				}
-				index=index.awlad.get(str.charAt(j));
 			}
+
 		}
-
-
 	}
 	public void clear(){
 
