@@ -43,10 +43,11 @@ public class Trie {
 				currentNode=index.awlad.get(currentChar);
 			}
 			index=currentNode;
-			index.isEnd=true;
+
 			//flag=(i==str.length()-2)? true : false;
 		}
-	} 
+		index.isEnd=true;
+	}
 
 	public boolean contains(String str){
 		TrieNode index =root;
@@ -97,26 +98,26 @@ public class Trie {
 	}
 	public void delete(String str){
 		TrieNode index =root;
-		TrieNode lastWord=new TrieNode();
+		TrieNode lastChar=new TrieNode();
 		for(int i =0 ;i<str.length();i++){
 			index=index.awlad.get(str.charAt(i));
 			if(index.isEnd){
-				lastWord=index;
+				lastChar=index;
 			}
 		}
 		if(! index.awlad.isEmpty()){
-		index.isEnd=false;	
+		index.isEnd=false;
 		}
 		else{
 			index=root;
 			for(int j=0;j<str.length();j++){
-				if(index.equals(lastWord)){
+				if(index.equals(lastChar)){
 					index.awlad.get(str.charAt(j)).awlad.clear();
 				}
 				index=index.awlad.get(str.charAt(j));
 			}
 		}
-	
+
 
 	}
 	public void clear(){
