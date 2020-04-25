@@ -9,6 +9,25 @@ public class Trie {
 
 
 
+	/*public void insert(String str){
+		TrieNode index = root;
+		boolean flag=false;
+		TrieNode currentNode =null;
+		for(int i =0 ; i < str.length() ; i++){
+			char currentChar = str.charAt(i);
+
+			if(!index.awlad.containsKey(currentChar)){
+				currentNode= new TrieNode(currentChar,flag);
+				index.awlad.put(currentChar, currentNode);
+			}
+			else{
+				currentNode=index.awlad.get(currentChar);
+			}
+			index=currentNode;
+			index.isEnd=true;
+			//flag=(i==str.length()-2)? true : false;
+		}
+	}*/
 	public void insert(String str){
 		TrieNode index = root;
 		boolean flag=false;
@@ -21,13 +40,13 @@ public class Trie {
 				index.awlad.put(currentChar, currentNode);
 			}
 			else{
-				System.out.println(index.awlad.get(currentChar));
 				currentNode=index.awlad.get(currentChar);
 			}
 			index=currentNode;
-			flag=(i==str.length()-2)? true : false;
+			index.isEnd=true;
+			//flag=(i==str.length()-2)? true : false;
 		}
-	}
+	} 
 
 	public boolean contains(String str){
 		TrieNode index =root;
