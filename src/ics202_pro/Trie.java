@@ -4,7 +4,6 @@ public class Trie {
 
 	TrieNode root = new TrieNode();
 
-
 	/////////////Omer Part///////////////////////////////////////////
 
 
@@ -94,11 +93,16 @@ public class Trie {
 
 	public boolean isPrefix(String str){
 		TrieNode index=root;
-
-		for(int i =0 ;i<str.length();i++){
-			index=index.awlad.get(str.charAt(i));
+		if(! contains(str)){
+			System.out.println("the word is not in the Trie");
+			return false;
 		}
-		return ! index.awlad.isEmpty();
+		else{
+			for(int i =0 ;i<str.length();i++){
+				index=index.awlad.get(str.charAt(i));
+			}
+			return ! index.awlad.isEmpty();
+		}
 
 	}
 	public void delete(String str){
@@ -130,7 +134,7 @@ public class Trie {
 					}
 				}
 				else{
-					root.awlad.get(str.charAt(0)).awlad.clear();
+					root.awlad.remove(str.charAt(0));
 				}
 			}
 		}
@@ -139,27 +143,43 @@ public class Trie {
 		root.awlad.clear();
 	}
 	public String allWordsPrefix(String str){
+
 		TrieNode index =root;
 		TrieNode x =new TrieNode();
 		TrieNode y =new TrieNode();
 		String allWords="",temp="",prefixWord="";
-		for(int i =0 ;i<str.length();i++){
-			prefixWord=index.element+"";
-			index=index.awlad.get(str.charAt(i));
-			}
-		while(x==index.awlad.get(index.awlad.size())){
-			int j=0;
-			x=index.awlad.get(j);
-			y=x;
-			while(y.awlad.isEmpty()){
-				temp=y.element+"";
-			}
-			j++;
+		if(! contains(str)){
+			return "the word is not in the Trie";
 		}
-		return null;
+		else if(! isPrefix(str)){
+			return "";
+		}
+		else{
+			for(int i =0 ;i<str.length();i++){
+				prefixWord=index.element+"";
+				index=index.awlad.get(str.charAt(i));
+			}
+			return getprefix(index);
+		}
 
 	}
 
+	public String getprefix(TrieNode x){
+//		String temp="";
+		TrieNode index=x;
+		TrieNode temp=x;
+		if(x.awlad.isEmpty()){
+			return x.element+"";
+		}
+		temp=index.awlad.get(0);
+		index.awlad.remove(0);
+		return index.element+getprefix(temp.awlad.get(0));
+	}
+//		else{
+//			for(int i=0 ;i<x.awlad.size();i++){
+//				return x.element+getprefix(x.awlad.get(i));
+//			}
+//		}
 	////////////////////////////////////////////////////////////////////////////////
 }
 

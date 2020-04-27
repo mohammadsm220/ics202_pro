@@ -1,7 +1,6 @@
 package ics202_pro;
-
 import java.util.HashMap;
-
+//import ics202_pro.Trie;
 public class TestMain {
 	public static void main(String args []){
 
@@ -14,9 +13,9 @@ public class TestMain {
 		t1.insert("sided");
 		System.out.println(t1.contains("sided"));
 		t1.insert("sid");
-//		t1.delete("sid");;
-
-		System.out.println(t1.isPrefix("sided"));
+		t1.delete("sided");;
+		System.out.println(t1.contains("sided"));
+		 allWordsPrefix("fdg");
 		//ch1
 	}
 
