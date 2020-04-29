@@ -152,34 +152,38 @@ public class Trie {
 			return "the word is not in the Trie";
 		}
 		else if(! isPrefix(str)){
-			return "";
+			return "the word is not a prefix";
 		}
 		else{
 			for(int i =0 ;i<str.length();i++){
 				prefixWord=index.element+"";
 				index=index.awlad.get(str.charAt(i));
 			}
-			return getprefix(index);
+			System.out.println(index.element);
+			return getprefix(index,0);
 		}
 
 	}
 
-	public String getprefix(TrieNode x){
-//		String temp="";
-		TrieNode index=x;
-		TrieNode temp=x;
-		if(x.awlad.isEmpty()){
-			return x.element+"";
+	public String getprefix(TrieNode index,int node){
+		System.out.println(index.element);
+		//		String temp="";
+//		int node =0;
+//		TrieNode index=new TrieNode();
+//		index=index.;
+//		TrieNode temp=new TrieNode();
+		if(index.awlad.isEmpty()){
+			return index.element+"";
 		}
-		temp=index.awlad.get(0);
-		index.awlad.remove(0);
-		return index.element+getprefix(temp.awlad.get(0));
+		else if(index.awlad.size()-node>1){
+//			temp=index.awlad.get(0);
+//			index.awlad.remove(0);
+			return index.element+getprefix(index.awlad.get(node),0)+getprefix(index,node+1);
+		}else{
+			return index.element+getprefix(index.awlad.get(node),node);
+		}
 	}
-//		else{
-//			for(int i=0 ;i<x.awlad.size();i++){
-//				return x.element+getprefix(x.awlad.get(i));
-//			}
-//		}
+
 	////////////////////////////////////////////////////////////////////////////////
 }
 

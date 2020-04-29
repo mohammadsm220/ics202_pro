@@ -14,7 +14,7 @@ public class TestMain {
 		t1.insert("sid");
 		t1.delete("sided");;
 		System.out.println(t1.contains("sided"));
-		 System.out.println(t1.allWordsPrefix("fdg"));
+		 System.out.println(t1.allWordsPrefix("sid"));
 		//ch1
 	}
 
