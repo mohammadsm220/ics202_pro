@@ -115,6 +115,7 @@ public class Trie {
 	}
 	public void clear(){
 		root.awlad.clear();
+		this.size=0;
 	}
 	public String allWordsPrefix(String str){
 
