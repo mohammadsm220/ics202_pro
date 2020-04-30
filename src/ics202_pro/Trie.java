@@ -90,23 +90,24 @@ public class Trie {
 				if(index.isEnd&& i!= str.length()-1){
 					lastChar=index;
 				}
--			if(! index.awlad.isEmpty()){
-				index.isEnd=false;
-			}
-			else{
-				index=root;
-				if(lastChar!=null){
-					for(int j=0;j<str.length();j++){
-						if(index.equals(lastChar)){
-							index.awlad.get(str.charAt(j)).awlad.clear();
-							j=str.length()-1;
+				if(! index.awlad.isEmpty()){
+					index.isEnd=false;
+				}
+				else{
+					index=root;
+					if(lastChar!=null){
+						for(int j=0;j<str.length();j++){
+							if(index.equals(lastChar)){
+								index.awlad.get(str.charAt(j)).awlad.clear();
+								j=str.length()-1;
+							}
+							index=index.awlad.get(str.charAt(j));
 						}
-						index=index.awlad.get(str.charAt(j));
 					}
 				}
-				
-					root.awlad.remove(str.charAt(0));
-				
+				root.awlad.remove(str.charAt(0));
+
+
 			}
 		}
 	}
