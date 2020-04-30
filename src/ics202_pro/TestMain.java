@@ -1,7 +1,5 @@
 package ics202_pro;
-
 import java.util.HashMap;
-
 public class TestMain {
 	public static void main(String args []){
 
@@ -10,6 +8,7 @@ public class TestMain {
 		String str="car";
 
 		t1.insert(str);
+
 
 
 
@@ -25,28 +24,6 @@ public class TestMain {
 		System.out.println(t1.size);
 		System.out.println(t1.contains("side"));
 		System.out.println(t1.contains("sid"));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 		//ch1

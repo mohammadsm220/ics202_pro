@@ -12,7 +12,7 @@ public class Main {
 			Trie t1 =new Trie();
 			System.out.println("trie has been created!");
 			while(x==0){
-			System.out.println( "choose one of the follwoing options by entering the number:\n"
+			System.out.println("choose one of the follwoing options by entering the number:\n"
 					+ "1-Insert a word to the tree\n"
 					+ "2-Delete a word from the tree\n"
 					+ "3-List all words that begin with a prefix\n"
