@@ -90,8 +90,7 @@ public class Trie {
 				if(index.isEnd&& i!= str.length()-1){
 					lastChar=index;
 				}
-			}
-			if(! index.awlad.isEmpty()){
+-			if(! index.awlad.isEmpty()){
 				index.isEnd=false;
 			}
 			else{
@@ -105,9 +104,9 @@ public class Trie {
 						index=index.awlad.get(str.charAt(j));
 					}
 				}
-				else{
+				
 					root.awlad.remove(str.charAt(0));
-				}
+				
 			}
 		}
 	}
