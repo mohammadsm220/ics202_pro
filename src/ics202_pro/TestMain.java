@@ -14,17 +14,20 @@ public class TestMain {
 
 		t1.insert("side");
 		t1.insert("sid");
+		t1.insert("sido");
 		System.out.println(t1.contains("side"));
 		System.out.println(t1.size);
 		System.out.println(t1.contains("sid"));
 
 		System.out.println(t1.contains("cat"));
 		t1.delete("sid");
+		System.out.println(t1.size);
 		t1.delete("side");
+
 		System.out.println(t1.size);
 		System.out.println(t1.contains("side"));
 		System.out.println(t1.contains("sid"));
-
+		System.out.println(t1.contains("sido"));
 
 		//ch1
 	}

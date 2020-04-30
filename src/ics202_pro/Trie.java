@@ -100,14 +100,16 @@ public class Trie {
 					for(int j=0;j<str.length();j++){
 						if(index.equals(lastChar)){
 							index.awlad.get(str.charAt(j)).awlad.clear();
+							this.size--;
 							j=str.length()-1;
 						}
 						index=index.awlad.get(str.charAt(j));
 					}
 				}
-				else{
+
+					this.size=this.size-str.length();
 					root.awlad.remove(str.charAt(0));
-				}
+
 			}
 		}
 	}
