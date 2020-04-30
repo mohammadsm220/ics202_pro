@@ -160,24 +160,21 @@ public class Trie {
 				index=index.awlad.get(str.charAt(i));
 			}
 			System.out.println(index.element);
-			return getprefix(index,0);
+			return getprefix(index,1);
 		}
 
 	}
 
 	public String getprefix(TrieNode index,int node){
 		System.out.println(index.element);
-		//		String temp="";
-//		int node =0;
-//		TrieNode index=new TrieNode();
-//		index=index.;
-//		TrieNode temp=new TrieNode();
-		if(index.awlad.isEmpty()){
+		if(index == null){
+			return " ";
+		}
+		else if(index.awlad.isEmpty()){
 			return index.element+"";
 		}
 		else if(index.awlad.size()-node>1){
-//			temp=index.awlad.get(0);
-//			index.awlad.remove(0);
+
 			return index.element+getprefix(index.awlad.get(node),0)+getprefix(index,node+1);
 		}else{
 			return index.element+getprefix(index.awlad.get(node),node);
