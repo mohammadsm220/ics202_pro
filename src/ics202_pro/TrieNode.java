@@ -4,11 +4,13 @@ import java.util.HashMap;
 
 public class TrieNode {
 
-	HashMap <Character , TrieNode> awlad=new HashMap <Character , TrieNode>();;
+	HashMap <Character , TrieNode> awlad =new HashMap <Character , TrieNode>();
 	char element;
 	boolean isEnd;
 
-	TrieNode(){}
+	TrieNode(){
+		
+	}
 
 
 

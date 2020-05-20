@@ -19,7 +19,7 @@ public class Main {
 					+ "2-Delete a word from the trie\n"
 					+ "3-List all words that begin with a prefix\n"
 					+ "4-Size of the trie\n"
-					+ "5-fill the trie with all words in the dictionary in capital letters\n"
+					+ "5-fill the trie with all words in the dictionary in small letters\n"
 					+ "6-see of the trie contains a word?\n"
 					+ "7-clear the trie\n"
 					+ "8-End program");
@@ -28,13 +28,13 @@ public class Main {
 				System.out.println("Enter the word you like do insert:");
 				String A21= input.next();
 				t1.insert(A21);
-				System.out.println("the word"+A21+"has been inserted");
+				System.out.println("the word-"+A21+"-has been inserted");
 			}
 			if(A2.equalsIgnoreCase("2")){
 				System.out.println("Enter the word you like do delete:");
 				String A21= input.next();
 				t1.delete(A21);
-				System.out.println("the word"+A21+"has been deleted");
+				System.out.println("the word-"+A21+"-has been deleted");
 			}
 			if(A2.equalsIgnoreCase("3")){
 				System.out.println("Enter the prefix:");
@@ -47,7 +47,7 @@ public class Main {
 			if(A2.equalsIgnoreCase("5")){
 				Scanner wordInput =new Scanner(new FileInputStream("dec.txt"));
 				while(wordInput.hasNext())
-					t1.insert(wordInput.next());
+					t1.insert(wordInput.next().toLowerCase());
 				System.out.println("trie has been filled with all words in the dictionary inserted!");
 			}
 			if(A2.equalsIgnoreCase("6")){
