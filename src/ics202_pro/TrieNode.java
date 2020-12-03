@@ -1,20 +1,29 @@
 package ics202_pro;
 import java.util.ArrayList;
 
+import java.util.HashMap;
+
 public class TrieNode {
 
-	ArrayList<TrieNode> nodes;
-	String element;
+	HashMap <Character , TrieNode> awlad =new HashMap <Character , TrieNode>();
+	char element;
 	boolean isEnd;
+
 	TrieNode(){
-		nodes=null;
-		element = null;
-		isEnd=false;
+		
 	}
 
-	TrieNode(String element,ArrayList<TrieNode> nodes ,boolean isEnd ){
-		this.nodes=nodes;
+
+
+	TrieNode(char element, boolean isEnd ){
+
 		this.element = element;
+
 		this.isEnd=isEnd;
+
+
 	}
+
+
+
 }
